@@ -3,5 +3,60 @@
 version = 4
 
 [[package]]
+name = "bitflags"
+version = "2.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5c8214115b7bf84099f1309324e63141d4c5d7cc26862f97a0a857dbefe165bd"
+
+[[package]]
 name = "cpu"
 version = "0.1.0"
+dependencies = [
+ "mos6502",
+ "sdl3",
+]
+
+[[package]]
+name = "lazy_static"
+version = "1.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
+
+[[package]]
+name = "libc"
+version = "0.2.172"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d750af042f7ef4f724306de029d18836c26c1765a54a6a3f094cbd23a7267ffa"
+
+[[package]]
+name = "log"
+version = "0.4.27"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
+
+[[package]]
+name = "mos6502"
+version = "0.6.2"
+source = "git+https://github.com/mre/mos6502.git#6c6a68aa3a9c15e02d774ffd325492fc87e597df"
+dependencies = [
+ "bitflags",
+ "log",
+]
+
+[[package]]
+name = "sdl3"
+version = "0.14.26"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "20199030cecbe3a297f66663e9a08bad4ddb09fa2d3bf7ab198bb38ffeeabe6f"
+dependencies = [
+ "bitflags",
+ "lazy_static",
+ "libc",
+ "sdl3-sys",
+]
+
+[[package]]
+name = "sdl3-sys"
+version = "0.4.7+SDL3-3.2.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f0d16a8a3623a4cb39a3661c81d9d4c5fd77ada27fc056e320b3651bf7bde1b1"
