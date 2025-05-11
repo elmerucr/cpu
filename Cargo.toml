@@ -4,5 +4,3 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-sdl3 = { version = "0", features = [] }
-mos6502 = { git = "https://github.com/mre/mos6502.git" }
